@@ -1,9 +1,29 @@
 <template>
   <div>
-    <Navbar />
-    <Nuxt />
+    <Navbar :isLogoVisible="elementsVisible"/>
+    <Nuxt/>
+    <Footer v-if="elementsVisible"/>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+      elementsVisible: false,
+    }
+  },
+  mounted() {
+    this.elementsVisible = this.$route.path !== '/';
+  },
+  watch: {
+    '$route.path'(to, _) {
+      this.elementsVisible = to !== '/';
+    }
+  }
+})
+</script>
 
 <style>
 * {

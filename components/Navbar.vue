@@ -69,19 +69,17 @@ export default Vue.extend({
   name: 'Navbar',
   data() {
     return {
-      isLogoVisible: false,
-      isActive: false,
+      isActive: false
     }
   },
-  mounted() {
-    this.isLogoVisible = this.$route.path !== '/';
-  },
-  watch: {
-    '$route.path'(to, _) {
-      this.isLogoVisible = to !== '/';
+  props: {
+    isLogoVisible: {
+      type: Boolean,
+      required: true,
+      default: false
     }
   }
 })
 </script>
 
-<style lang="css" src="./Navbar.css" scoped />
+<style src="./Navbar.css" scoped />
