@@ -57,6 +57,10 @@
   cursor: pointer;
 }
 
+.navbar .navbar__nav a.nuxt-link-exact-active {
+  color: #0CC6FF;
+}
+
 @media screen and (max-width: 769px) 
 {
   .navbar {

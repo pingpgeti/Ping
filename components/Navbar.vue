@@ -48,7 +48,7 @@
           <NuxtLink to="/">strona główna</NuxtLink>
         </li>
         <li>
-          <a>o nas</a>
+          <NuxtLink to="/about">o nas</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/gallery">galeria</NuxtLink>
@@ -57,7 +57,7 @@
           <a>ctf</a>
         </li>
         <li>
-          <a>kontakt</a>
+          <NuxtLink to="/contact">kontakt</NuxtLink>
         </li>
       </ul>
   </nav>
