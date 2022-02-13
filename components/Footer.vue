@@ -2,24 +2,26 @@
   <footer class="footer">
     <span class="footer__caption">
       web powered by
-      <a class="link" href="https://mikr.us">mikr.us</a>
+      <HoverLink class="link" href="https://mikr.us">mikr.us</HoverLink>
     </span>
     <span class="footer__caption">
       Made by
-      <a class="link" href="https://github.com/mobaradev">MObara</a> and
-      <a class="link" href="https://github.com/JakubK">JakubK</a>
+      <HoverLink class="link" href="https://github.com/mobaradev">MObara</HoverLink> and
+      <HoverLink class="link" href="https://github.com/JakubK">JakubK</HoverLink>
     </span>
     <span class="footer__caption">
       designed by
-      <a class="link" href="https://www.instagram.com/kocurrok/">kocurrok</a>
+      <HoverLink href="https://www.instagram.com/kocurrok/">kocurrok</HoverLink>
     </span>
   </footer>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import HoverLink from './HoverLink.vue'
 export default Vue.extend({
-  name: 'Footer',
+    name: "Footer",
+    components: { HoverLink }
 })
 </script>
 

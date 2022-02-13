@@ -49,29 +49,6 @@ body {
   }
 }
 
-.link {
-  text-decoration: none;
-  color: #0CC6FF;
-  position: relative;
-}
-
-.link:after {
-  position: absolute;
-  display: block;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 1px;
-  content: '';
-  background:#0CC6FF;
-
-  transition: all 0.5s;
-}
-
-.link:hover:after {
-  width: 100%;
-}
-
 ul {
   padding-inline-start: 0;
 }
