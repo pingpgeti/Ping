@@ -1,6 +1,5 @@
 .animated-text {
-  position: relative;
-  display: flex;
+  text-align: center;
   font-size: 80px;
 }
 

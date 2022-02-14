@@ -19,12 +19,12 @@ export default Vue.extend({
     milisecondsPerLetter: {
       type: Number,
       required: false,
-      default: 175
+      default: 100
     },
     textFadeDelay: {
       type: Number,
       required: false,
-      default: 1000
+      default: 300
     },
     pointerTick: {
       type: Number,
@@ -45,6 +45,8 @@ export default Vue.extend({
   },
   methods: {
     getWord() {
+      if(this.words.length < 1)
+        return '';
       let i;
       let counter = 0;
       for(i = 0; i < this.words.length; i++) {
