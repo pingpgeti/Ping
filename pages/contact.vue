@@ -9,7 +9,6 @@
           <h3>aby nas lepiej poznać.</h3>
         </div>
       </div>
-
       <div class="contact__forms">
         <h3>mail: ping@eti.pg.edu.pl</h3>
         <h3>facebook: fb.com/pingetipg</h3>

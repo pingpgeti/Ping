@@ -1,6 +1,8 @@
 <template>
   <div class="main">
-    <AnimatedText class="main__center" @finished="isLogoVisible = true" text="KOŁO NAUKOWE POLITECHNIKI GDAŃSKIEJ"/>
+    <AnimatedText class="main__center"
+      @finished="isLogoVisible = true"
+      text="KOŁO NAUKOWE POLITECHNIKI GDAŃSKIEJ"/>
     <Transition mode="out-in" name="fade">
       <svg
         v-if="isLogoVisible"

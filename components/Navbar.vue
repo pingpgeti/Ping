@@ -54,7 +54,7 @@
           <NuxtLink to="/gallery">galeria</NuxtLink>
         </li>
         <li>
-          <a>ctf</a>
+          <NuxtLink to="/ctf">ctf</NuxtLink>
         </li>
         <li>
           <NuxtLink to="/contact">kontakt</NuxtLink>
