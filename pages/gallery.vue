@@ -4,7 +4,10 @@
       <h1>Galeria. Tu zobaczysz jak działamy</h1>
     </header>
     <div class="gallery__grid">
-      <GalleryImage v-for="(image, index) in images" :key="index" :text="image.text" :src="image.src"/>
+      <GalleryImage v-for="(image, index) in images"
+        :key="index"
+        :text="image.text"
+        :src="image.src"/>
     </div>
   </div>
 </template>
