@@ -1,0 +1,31 @@
+.gallery {
+  color: white;
+  font-family: 'Space Mono', monospace;
+}
+
+.gallery h1 {
+  font-size: 50px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.gallery .gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem
+}
+
+.gallery__grid img {
+  width: 100%;
+}
+
+@media screen and (max-width: 769px) {
+  .gallery h1 {
+    font-size: 6vw;
+  }
+
+  .gallery .gallery__grid {
+    grid-template-columns: 1fr;
+    margin: 14px;
+  }
+}
