@@ -1,10 +1,10 @@
 <template>
-  <div class="main" style="color: white">
-    <AnimatedText class="main__animated-text logo" @finished="isLogoVisible = true" text="KOŁO NAUKOWE POLITECHNIKI GDAŃSKIEJ"/>
+  <div class="main">
+    <AnimatedText class="main__center" @finished="isLogoVisible = true" text="KOŁO NAUKOWE POLITECHNIKI GDAŃSKIEJ"/>
     <Transition mode="out-in" name="fade">
       <svg
         v-if="isLogoVisible"
-        class="logo"
+        class="main__center logo"
         viewBox="0 0 99 28"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">

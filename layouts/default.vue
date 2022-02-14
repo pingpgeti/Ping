@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar :isLogoVisible="elementsVisible"/>
-    <Nuxt/>
+    <Nuxt style="width: 100%;"/>
     <Footer v-if="elementsVisible"/>
   </div>
 </template>

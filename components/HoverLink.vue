@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="hover-link">
+  <a :href="href" :target="target" :rel="rel" class="hover-link">
     <slot/>
   </a>
 </template>
@@ -11,6 +11,14 @@ export default Vue.extend({
     href: {
       type: String,
       required: true
+    },
+    target: {
+      type: String,
+      required: false
+    },
+    rel: {
+      type: String,
+      required: false
     }
   }
 })

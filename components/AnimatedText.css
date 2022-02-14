@@ -2,15 +2,13 @@
   position: relative;
   display: flex;
   font-size: 80px;
-  @media (max-width: 769px) {
-    padding-top: 67px;
-    height: calc(100vh);
-    overflow: hidden;
-  }
 }
 
-
 @media (max-width: 769px) {
+  .animated-text {
+    padding-top: 67px;
+    overflow: hidden;
+  }
   .animated-text__content {
     font-size: 36px;
   }
@@ -21,7 +19,6 @@
   text-align: center;
   font-weight: 500;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
-  max-width: 1000px;
 }
 
 .animated-text__pointer {
