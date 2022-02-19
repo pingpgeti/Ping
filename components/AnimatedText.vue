@@ -2,7 +2,6 @@
   <div class="animated-text" v-if="!isAnimationDone">
     <span class="animated-text__content">
       {{ getWord() }}
-      <span :style="{ opacity: pointerIteration % 2 }" class="animated-text__pointer">|</span>
     </span>
   </div>
 </template>
@@ -26,21 +25,14 @@ export default Vue.extend({
       required: false,
       default: 300
     },
-    pointerTick: {
-      type: Number,
-      required: false,
-      default: 300
-    }
   },
   data() {
     return {
       letterIterator: 0,
-      pointerIteration: 0,
       allLettersLength: 0,
       isAnimationDone: false,
       words: [],
       textInterval: null,
-      pointerInterval: null
     }
   },
   methods: {
@@ -56,7 +48,7 @@ export default Vue.extend({
       }
       if(i >= this.words.length)
         return this.text;
-      return this.words[i].substring(0, this.letterIterator - (counter - this.words[i].length - 1));
+      return this.words[i].substring(0, this.letterIterator - (counter - this.words[i].length - 1)) + "|";
     }
   },
   beforeMount() {
@@ -75,12 +67,6 @@ export default Vue.extend({
         }, this.textFadeDelay)
       }
     }, this.milisecondsPerLetter);
-
-    this.pointerInterval = setInterval(() => {
-      this.pointerIteration += 1;
-      if(this.isAnimationDone)
-        clearInterval(this.pointerInterval);
-    }, this.pointerTick)
   }
 })
 </script>
