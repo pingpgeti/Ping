@@ -9,6 +9,7 @@
         :text="image.text"
         :src="image.src"/>
     </div>
+    <Footer/>
   </div>
 </template>
 

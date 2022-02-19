@@ -5,7 +5,6 @@
 
 @media (max-width: 769px) {
   .animated-text {
-    padding-top: 67px;
     overflow: hidden;
   }
   .animated-text__content {

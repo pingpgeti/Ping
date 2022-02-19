@@ -19,6 +19,7 @@
       <h3>Tu jesteśmy!</h3>
       <img alt="map" src="https://knping.pl/static/media/map.bfeb3a8f.png"/>
     </div>
+    <Footer/>
   </div> 
 </template>
 
