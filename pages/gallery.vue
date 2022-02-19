@@ -16,32 +16,31 @@
 <script lang="ts">
 import Vue from 'vue'
 import GalleryImage from '~/components/GalleryImage.vue';
+
+import GetGalleries from '~/graphql/getGalleries.gql';
+
+import { client } from '~/apollo/client';
+
 export default Vue.extend({
     name: "Gallery",
-    data() {
+    components: { GalleryImage },
+    data: () => ({
+      images: [],
+    }),
+    async asyncData() {
+      const { data } = await client.query({query: GetGalleries});
+      const images = data.allGallerys.edges.map(edge => {
+        return {
+          text: edge.node.title[0].text,
+          src: edge.node.images[0].image.url
+        }
+      });
       return {
-        images: [
-          {
-            text: "Zajęcia z bezpieczeństwa API z Maciejem Koflem",
-            src: "https://knping.pl/images/kofel_prezentacja4.png"
-          },
-          {
-            text: "Selfie ze spotkania z Maciejem Koflem",
-            src: "https://knping.pl/images/kofelselfie3.jpg",
-          },
-          {
-            text: "Ping oraz Maciej Kofel ze szkolasecurity.pl",
-            src: "https://knping.pl/images/ping_i_kofel2.png"
-          },
-          {
-            text: "Spotkanie z Maciejem Koflem ze szkolasecurity.pl",
-            src: "https://knping.pl/images/IMG_2035.png"
-          }
-        ]
-      };
-  },
-  components: { GalleryImage }
-})
+        images
+      }
+    }    
+  }
+)
 </script>
 
 <style src="./gallery.css" scoped/>
