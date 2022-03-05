@@ -2,6 +2,11 @@
   color: white;
 }
 
+.main__animation {
+  position: relative;
+  height: calc(100vh - 150px);
+}
+
 .main__center {
   position: absolute;
   top: 50%;
@@ -10,6 +15,14 @@
 
   max-width: 1100px;
   width: 90%;
+}
+
+.main__info {
+  padding-bottom: 50px;
+}
+
+.main__news {
+  margin-top: 32px;
 }
 
 .logo {

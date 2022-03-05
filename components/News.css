@@ -1,0 +1,38 @@
+.news__header {
+  font-family: 'Space Mono', sans-serif;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.news__header::after {
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #0CC6FF;
+}
+
+.news__date {
+  font-family: 'Space Mono', sans-serif;
+  display: inline-block;
+  margin: 6px 0;
+}
+
+.news__content {
+  margin-top: 10px;
+  display: flex;
+}
+
+.news__img {
+  max-width: 150px;
+  max-height: 150px;
+  margin-right: 16px;
+  float: left;
+}
+
+.news__text {
+  font-family: 'Space Mono', sans-serif;
+}

@@ -1,0 +1,12 @@
+{
+  allNewss(last: 10) {
+    edges {
+      node {
+        title
+        date
+        image
+        text
+      }
+    }
+  }
+}
