@@ -50,10 +50,6 @@
 .navbar .navbar__nav a {
   text-decoration: none;
   color: white;
-}
-
-.navbar .navbar__nav a:hover{
-  color: #0CC6FF;
   cursor: pointer;
 }
 

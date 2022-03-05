@@ -5,6 +5,8 @@
   flex-grow: 0;
 
   overflow: hidden;
+
+  cursor: pointer;
 }
 
 .gallery-image img {

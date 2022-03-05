@@ -19,30 +19,32 @@ export default Vue.extend({
   data() {
     return {
       elementsVisible: false,
-      touchStart: 0,
-      touchEnd: 0
+      touchStartX: 0,
+      touchEndX: 0,
+      sensitivity: 100
     }
   },
   methods: {
     startTracking(e) {
-      this.touchstartX = e.changedTouches[0].screenX
+      this.touchStartX = e.changedTouches[0].screenX
     },
     endTracking(e) {
-      this.touchendX = e.changedTouches[0].screenX
+      this.touchEndX = e.changedTouches[0].screenX
       this.handleGesture()
     },
     handleGesture() {
       const route = this.$route.path;
       const routeIndex = routes.indexOf(route);
-      if (this.touchendX > this.touchstartX){
-        if(routeIndex > 0)
+      const sense = Math.abs(this.touchEndX - this.touchStartX);
+      if (this.touchEndX > this.touchStartX){
+        if(routeIndex > 0 && sense > this.sensitivity)
           this.$router.push({
             path: routes[routeIndex - 1]
           })
       } 
         
-      if (this.touchendX < this.touchstartX){
-        if(routeIndex < routes.length - 1)
+      if (this.touchEndX < this.touchStartX){
+        if(routeIndex < routes.length - 1 && sense > this.sensitivity)
           this.$router.push({
             path: routes[routeIndex + 1]
           })

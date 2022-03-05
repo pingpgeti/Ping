@@ -5,7 +5,7 @@
       <HoverLink class="link" href="https://mikr.us">mikr.us</HoverLink>
     </span>
     <span class="footer__caption">
-      Made by
+      made by
       <HoverLink class="link" href="https://github.com/mobaradev">MObara</HoverLink> and
       <HoverLink class="link" href="https://github.com/JakubK">JakubK</HoverLink>
     </span>

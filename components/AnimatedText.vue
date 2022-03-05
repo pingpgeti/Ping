@@ -48,7 +48,7 @@ export default Vue.extend({
       }
       if(i >= this.words.length)
         return this.text;
-      return this.words[i].substring(0, this.letterIterator - (counter - this.words[i].length - 1)) + "|";
+      return this.words[i].substring(0, this.letterIterator - (counter - this.words[i].length - 1));
     }
   },
   beforeMount() {

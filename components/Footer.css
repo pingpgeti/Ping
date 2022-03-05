@@ -21,3 +21,9 @@
   height: 2px;
   background:#0CC6FF;
 }
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+}
