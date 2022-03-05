@@ -4,6 +4,18 @@
   position: relative;
 }
 
+.hover-link a {
+  text-decoration: none;
+}
+
+.hover-link--nuxt {
+  color: white;
+}
+
+.nuxt-link-exact-active {
+  color: #0CC6FF;
+}
+
 .hover-link:after {
   position: absolute;
   display: block;

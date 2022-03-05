@@ -45,19 +45,19 @@
       </div>
       <ul class="navbar__nav">
         <li>
-          <NuxtLink to="/">strona główna</NuxtLink>
+          <HoverLink :isNuxtLink="true" href="/">strona główna</HoverLink>
         </li>
         <li>
-          <NuxtLink to="/about">o nas</NuxtLink>
+          <HoverLink :isNuxtLink="true" href="/about">o nas</HoverLink>
         </li>
         <li>
-          <NuxtLink to="/gallery">galeria</NuxtLink>
+          <HoverLink :isNuxtLink="true" href="/gallery">galeria</HoverLink>
         </li>
         <li>
-          <NuxtLink to="/ctf">ctf</NuxtLink>
+          <HoverLink :isNuxtLink="true" href="/ctf">ctf</HoverLink>
         </li>
         <li>
-          <NuxtLink to="/contact">kontakt</NuxtLink>
+          <HoverLink :isNuxtLink="true" href="/contact">kontakt</HoverLink>
         </li>
       </ul>
   </nav>
@@ -65,20 +65,22 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import HoverLink from './HoverLink.vue'
 export default Vue.extend({
-  name: 'Navbar',
-  data() {
-    return {
-      isActive: false
-    }
-  },
-  props: {
-    isLogoVisible: {
-      type: Boolean,
-      required: true,
-      default: false
-    }
-  }
+    name: "Navbar",
+    data() {
+        return {
+            isActive: false
+        };
+    },
+    props: {
+      isLogoVisible: {
+        type: Boolean,
+        required: true,
+        default: false
+      }
+    },
+    components: { HoverLink }
 })
 </script>
 
