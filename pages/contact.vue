@@ -17,7 +17,7 @@
     <div class="contact__separator"/>
     <div class="contact__where">
       <h3>Tu jesteśmy!</h3>
-      <img alt="map" src="static/map.png"/>
+      <img alt="map" src="/map.png"/>
     </div>
     <Footer/>
   </div> 
