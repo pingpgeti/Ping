@@ -7,7 +7,7 @@ import fetch from 'cross-fetch';
 
 const client = new ApolloClient({
   link: PrismicLink({
-    uri: 'https://suskatest.prismic.io/graphql',
+    uri: 'https://ping.prismic.io/graphql',
     fetch: fetch
   }) as any,
   cache: new InMemoryCache(),
