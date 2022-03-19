@@ -54,7 +54,7 @@ import Vue from 'vue'
 import AnimatedText from '~/components/AnimatedText.vue'
 import News from '~/components/News.vue'
 
-import GetNews from '~/graphql/GetNews.gql';
+import GetNews from '~/graphql/getNews.gql';
 import { client } from '~/apollo/client';
 
 export default Vue.extend({
