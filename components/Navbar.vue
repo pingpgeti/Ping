@@ -44,20 +44,8 @@
         </svg>
       </div>
       <ul class="navbar__nav">
-        <li>
-          <HoverLink :isNuxtLink="true" href="/">strona główna</HoverLink>
-        </li>
-        <li>
-          <HoverLink :isNuxtLink="true" href="/about">o nas</HoverLink>
-        </li>
-        <li>
-          <HoverLink :isNuxtLink="true" href="/gallery">galeria</HoverLink>
-        </li>
-        <li>
-          <HoverLink :isNuxtLink="true" href="/ctf">ctf</HoverLink>
-        </li>
-        <li>
-          <HoverLink :isNuxtLink="true" href="/contact">kontakt</HoverLink>
+        <li v-for="(link, index) in links" :key="index">
+          <HoverLink @click.native="isActive = false" :isNuxtLink="true" :href="link">{{ linkTexts[index] }}</HoverLink>
         </li>
       </ul>
   </nav>
@@ -69,9 +57,11 @@ import HoverLink from './HoverLink.vue'
 export default Vue.extend({
     name: "Navbar",
     data() {
-        return {
-            isActive: false
-        };
+      return {
+        isActive: false,
+        links: ['/', '/about', '/gallery', '/ctf', '/contact'],
+        linkTexts: ['strona główna', 'o nas', 'galeria', 'ctf', 'kontakt']
+      };
     },
     props: {
       isLogoVisible: {
