@@ -24,6 +24,6 @@ jobs:
           username: ${{ secrets.SCP_USER }}
           password: ${{ secrets.SCP_PASSWORD }}
           port: ${{ secrets.SCP_PORT }}
-          source: "build/"
+          source: "dist/"
           strip_components: 1
           target: "/var/www/html"
