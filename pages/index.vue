@@ -64,11 +64,13 @@ export default Vue.extend({
     async asyncData() {
       const { data } = await client.query({query: GetNews});
       const news = data.allNewss.edges.map(edge => {
+        const title = edge.node.title ? edge.node.title[0].text : '';
+        const text = edge.node.text ? edge.node.text[0].text : '';
         return {
-          title: edge.node.title[0].text,
+          title,
           src: edge.node.image.url,
           date: edge.node.date,
-          text: edge.node.text[0].text
+          text
         }
       });
 
