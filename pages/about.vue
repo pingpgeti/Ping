@@ -4,7 +4,7 @@
       <div class="section about__section">
         <div class="section__left">
           <h1>Kim jesteśmy?</h1>
-          <img alt="photo1" src="https://knping.pl/static/media/photo1.6ade681b.png"/>
+          <img alt="photo1" src="static/about1.png"/>
         </div>
         <div class="section__right">
           <div class="section__symbol">
@@ -23,7 +23,7 @@
       <div class="section about__section">
         <div class="section__left">
           <h1>Nasza Historia</h1>
-          <img alt="photo2" src="https://knping.pl/static/media/photo2.1366e653.png"/>
+          <img alt="photo2" src="static/about2.png"/>
         </div>
         <br/>
         <div class="section__right">
