@@ -16,6 +16,7 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap'}
     ]
   },
+  target: 'static',
   ssr: true,
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
