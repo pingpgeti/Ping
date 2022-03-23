@@ -8,11 +8,11 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Koło Naukowe PING funkcjonuje na Wydziale Elektroniki, Telekomunikacji i Informatyki Politechniki Gdańskiej i zajmuje się tematyką cyberbezpieczeństwa i sieci komputerowych. Działamy w ramach sekcji CTF, sekcji programistycznej oraz cotygodniowych spotkań organizowanych przez studentów. Napisz do nas na fanpejdż, aby dowiedzieć się więcej!' },
+      { name: 'format-detection', content: 'telephone=yes' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap'}
     ]
   },
