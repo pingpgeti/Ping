@@ -1,7 +1,7 @@
 <template>
   <div class="gallery">
     <header class="gallery__info">
-      <h1>Galeria. Tu zobaczysz jak działamy</h1>
+      <h1>Galeria - tu zobaczysz jak działamy</h1>
     </header>
     <client-only>
         <LightGallery

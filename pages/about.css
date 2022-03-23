@@ -8,6 +8,11 @@
   overflow: hidden;
 }
 
+.about__members {
+  display: block;
+  margin: 1em 0;
+}
+
 .about h1 {
   font-size: 60px;
   margin-block-start: 0;
