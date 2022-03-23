@@ -3,14 +3,14 @@
     <header class="gallery__info">
       <h1>Galeria. Tu zobaczysz jak działamy</h1>
     </header>
-    <div class="gallery__grid">
-      <client-only>
+    <client-only>
         <LightGallery
           :images="gallery"
           :index="index"
           :disable-scroll="true"
           @close="galleryIndex = null"/>
-      </client-only>
+    </client-only>
+    <div class="gallery__grid">
       <GalleryImage v-for="(image, index) in images"
         @click.native="galleryClick(index)"
         :key="index"

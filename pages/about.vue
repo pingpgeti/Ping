@@ -15,6 +15,7 @@
           <p>⚫ Aleksander Chotecki</p>
           <p>⚫ Krzysztof Domagalski</p>
           <p>⚫ Tomasz Dąbrowski</p>
+          <p>⚫ Aleksander Mielczarek</p>
           Nie musisz być studentem PG, by dołączyć do koła. Wystarczy, że napiszesz do nas na <HoverLink href="https://www.facebook.com/pingetipg" target="_blank" rel="noreferrer">Fanpage'u</HoverLink>.
           Zajęcia prowadzimy w każdy czwartek o 19:00 w formie otwartego spotkania. Zapraszamy!
         </div>
