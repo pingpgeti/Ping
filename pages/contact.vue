@@ -6,7 +6,7 @@
         <div>
           <h3>aby dołączyć do Koła,</h3>
           <h3>aby nawiązać współpracę,</h3>
-          <h3>aby nas lepiej poznać.</h3>
+          <h3>aby lepiej nas poznać.</h3>
         </div>
       </div>
       <div class="contact__forms">
