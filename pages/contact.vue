@@ -17,7 +17,9 @@
     <div class="contact__separator"/>
     <div class="contact__where">
       <h3>Tu jesteśmy!</h3>
-      <img alt="map" src="/map.png"/>
+      <a class="contact__map" href="https://maps.app.goo.gl/B2dyThoGf1Weep1R7">
+        <img alt="map" src="/map.png"/>
+      </a>
     </div>
     <Footer/>
   </div> 

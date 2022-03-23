@@ -39,10 +39,13 @@
   justify-content: space-between;
 }
 
+.contact__map {
+  display: contents;
+}
+
 .contact img {
   width: 65%;
 }
-
 
 @media screen and (max-width: 768px) {
   .contact h1 {
