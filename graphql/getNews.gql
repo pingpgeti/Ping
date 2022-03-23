@@ -1,5 +1,5 @@
 {
-  allNewss(last: 10) {
+  allNewss(sortBy: date_DESC) {
     edges {
       node {
         title

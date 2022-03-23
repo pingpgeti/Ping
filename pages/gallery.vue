@@ -45,6 +45,7 @@ export default Vue.extend({
           children
         }
       });
+
       return {
         images
       }
