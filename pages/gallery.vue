@@ -6,14 +6,14 @@
     <client-only>
         <LightGallery
           :images="gallery"
-          :index="index"
+          :index="galleryIndex"
           :disable-scroll="true"
-          @close="galleryIndex = null"/>
+          @close="closeGallery"/>
     </client-only>
     <div class="gallery__grid">
-      <GalleryImage v-for="(image, index) in images"
-        @click.native="galleryClick(index)"
-        :key="index"
+      <GalleryImage v-for="(image, gIndex) in images"
+        @click.native="galleryClick(gIndex)"
+        :key="gIndex"
         :text="image.text"
         :src="image.src"/>
     </div>
@@ -27,6 +27,7 @@ import GalleryImage from '~/components/GalleryImage.vue';
 
 import GetGalleries from '~/graphql/getGalleries.gql';
 import { client } from '~/apollo/client';
+import { mapMutations } from 'vuex';
 
 export default Vue.extend({
     name: "Gallery",
@@ -51,11 +52,6 @@ export default Vue.extend({
       }
     },
     computed: {
-      index() {
-        if(this.gallery.length > 0)
-          return 0;
-        return null;
-      },
       gallery() {
         if(this.images[this.galleryIndex])
           return this.images[this.galleryIndex].children;
@@ -65,7 +61,16 @@ export default Vue.extend({
     methods: {
       galleryClick(index) {
         this.galleryIndex = index;
-      }
+        this.lock();
+      },
+      closeGallery() {
+        this.galleryIndex = null;
+        this.unlock();
+      },
+      ...mapMutations([
+        'lock',
+        'unlock'
+      ])
     }
   }
 )
