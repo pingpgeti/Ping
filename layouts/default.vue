@@ -7,15 +7,10 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
-import Index from '~/pages/index.vue'
-
 import { routes } from '~/utils/routes';
+import { mapGetters } from 'vuex';
 
 export default Vue.extend({
-  components: {
-    Index
-  },
   data() {
     return {
       elementsVisible: false,
@@ -24,13 +19,19 @@ export default Vue.extend({
       sensitivity: 100
     }
   },
+  computed: {
+    ...mapGetters([
+      'swipingLocked'
+    ])
+  },
   methods: {
     startTracking(e) {
-      this.touchStartX = e.changedTouches[0].screenX
+      this.touchStartX = e.changedTouches[0].screenX;
     },
     endTracking(e) {
-      this.touchEndX = e.changedTouches[0].screenX
-      this.handleGesture()
+      this.touchEndX = e.changedTouches[0].screenX;
+      if(!this.swipingLocked)
+        this.handleGesture();
     },
     handleGesture() {
       const route = this.$route.path;
