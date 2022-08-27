@@ -13,10 +13,12 @@
           Koło naukowe PING Politechniki Gdańskiej to zespół tworzony przez ludzi, których łączy zamiłowanie do cyberbezpieczeństwa. Pasję dzielimy nie tylko ze studentami wydziału ETI, ale także z ludźmi z całej Polski, w tym z hobbystami i z profesjonalistami z branży cybersecurity.
           Zarząd koła stanowią:
           <span class="about__members">
-            <p>⚫ Aleksander Chotecki</p>
-            <p>⚫ Krzysztof Domagalski</p>
-            <p>⚫ Tomasz Dąbrowski</p>
-            <p>⚫ Aleksander Mielczarek</p>
+            <ul>
+              <li>Aleksander Chotecki</li>
+              <li>Krzysztof Domagalski</li>
+              <li>Tomasz Dąbrowski</li>
+              <li>Aleksander Mielczarek</li>
+            </ul>
           </span>
           Nie musisz być studentem PG, by dołączyć do koła. Wystarczy, że napiszesz do nas na <HoverLink href="https://www.facebook.com/pingetipg" target="_blank" rel="noreferrer">Fanpage'u</HoverLink>.
           Zajęcia prowadzimy w każdy czwartek o 19:00 w formie otwartego spotkania. Zapraszamy!

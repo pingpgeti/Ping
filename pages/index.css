@@ -21,6 +21,11 @@
   padding-bottom: 50px;
 }
 
+.main__info h4 {
+  font-family: 'Space Mono', sans-serif;
+  font-size: 2em;
+}
+
 .main__news {
   margin-top: 32px;
 }

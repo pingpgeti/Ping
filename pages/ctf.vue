@@ -1,7 +1,7 @@
 <template>
   <div class="ctf">
     <h1>PING CTF 2022</h1>
-    <p><HoverLink :href="'https://ctf.knping.pl/'" target="_blank">Więcej informacji</HoverLink></p>
+    <p><HoverLink :href="'https://ctf.knping.pl/'" target="_blank">więcej informacji wkrótce</HoverLink></p>
   </div>
 </template>
 

@@ -37,7 +37,8 @@
         </svg>
       </Transition>
     </section>
-    <section class="main__info">
+    <section v-if="lang === 'pl-PL'" class="main__info">
+      <h4>Aktualności</h4>
       <News class="main__news"
         v-for="(newsInfo, index) in news"
         :key="index"
@@ -50,6 +51,8 @@
 </template>
 
 <script lang="ts">
+import { mapGetters } from 'vuex';
+
 import Vue from 'vue'
 import AnimatedText from '~/components/AnimatedText.vue'
 import News from '~/components/News.vue'
@@ -61,6 +64,7 @@ export default Vue.extend({
     name: "Index",
     layout: "default",
     components: { AnimatedText, News },
+    
     async asyncData() {
       const { data } = await client.query({query: GetNews});
       const news = data.allNewss.edges.map(edge => {
@@ -77,6 +81,11 @@ export default Vue.extend({
       return {
         news
       }
+    },
+    computed: {
+      ...mapGetters([
+        'lang'
+      ])
     },
     data() {
       return {

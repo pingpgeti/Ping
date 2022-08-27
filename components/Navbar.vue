@@ -42,6 +42,10 @@
             </clipPath>
           </defs>
         </svg>
+        <div class="navbar__langs">
+          <img @click="setLang('pl-PL')" src="/pl.png"/>
+          <img @click="setLang('en-US')" src="/uk.webp"/>
+        </div>
       </div>
       <ul class="navbar__nav">
         <li v-for="(link, index) in links" :key="index">
@@ -52,6 +56,7 @@
 </template>
 
 <script lang="ts">
+import { mapMutations } from 'vuex';
 import Vue from 'vue'
 import HoverLink from './HoverLink.vue'
 export default Vue.extend({
@@ -70,7 +75,13 @@ export default Vue.extend({
         default: false
       }
     },
-    components: { HoverLink }
+    components: { HoverLink },
+    methods: {
+      ...mapMutations(['setLang']),
+    },
+    mounted() {
+      this.setLang(navigator.language);
+    }
 })
 </script>
 
