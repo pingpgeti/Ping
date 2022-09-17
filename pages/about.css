@@ -8,8 +8,7 @@
   overflow: hidden;
 }
 
-.about__members {
-  display: block;
+.section ul {
   margin: 1em 1em;
 }
 

@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 import GalleryImage from '~/components/GalleryImage.vue';
 
 import GetGalleries from '~/graphql/getGalleries.gql';
@@ -40,7 +40,7 @@ export default Vue.extend({
       galleryIndex: null
     }),
     async asyncData() {
-      const { data: titleData } =  await client.query({query: getGalleryPage});
+      const { data: titleData } = await client.query({query: getGalleryPage});
       const title = {
         pl: titleData.allGallerypages.edges[0].node.pl[0].text,
         en: titleData.allGallerypages.edges[0].node.en[0].text,

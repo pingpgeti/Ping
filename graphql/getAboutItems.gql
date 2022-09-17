@@ -1,0 +1,17 @@
+{
+  allAboutitems {
+    edges {
+      node {
+        title {
+          pl
+          en
+        }
+        image
+        content {
+		      pl
+          en
+        }
+      }
+    }
+  }
+}
