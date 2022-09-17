@@ -1,0 +1,20 @@
+{
+  allContacts {
+    edges {
+      node {
+        mail
+        facebook
+        pl {
+          title
+          location
+          join
+        }
+        en {
+          title
+          location
+          join
+        }
+      }
+    }
+  }
+}
