@@ -49,39 +49,46 @@
       </div>
       <ul class="navbar__nav">
         <li v-for="(link, index) in links" :key="index">
-          <HoverLink @click.native="isActive = false" :isNuxtLink="true" :href="link">{{ linkTexts[index] }}</HoverLink>
+          <HoverLink @click.native="isActive = false" :isNuxtLink="true" :href="link.link">{{ labels[index] }}</HoverLink>
         </li>
       </ul>
   </nav>
 </template>
 
 <script lang="ts">
-import { mapMutations } from 'vuex';
+import { mapMutations, mapGetters } from 'vuex';
 import Vue from 'vue'
 import HoverLink from './HoverLink.vue'
 export default Vue.extend({
-    name: "Navbar",
-    data() {
-      return {
-        isActive: false,
-        links: ['/', '/about', '/gallery', '/ctf', '/contact'],
-        linkTexts: ['strona główna', 'o nas', 'galeria', 'ctf', 'kontakt']
-      };
-    },
-    props: {
-      isLogoVisible: {
-        type: Boolean,
-        required: true,
-        default: false
-      }
-    },
-    components: { HoverLink },
-    methods: {
-      ...mapMutations(['setLang']),
-    },
-    mounted() {
-      this.setLang(navigator.language);
+  name: "Navbar",
+  data() {
+    return {
+      isActive: false,
+    };
+  },
+  props: {
+    isLogoVisible: {
+      type: Boolean,
+      required: true,
+      default: false
     }
+  },
+  components: { HoverLink },
+  methods: {
+    ...mapMutations(['setLang']),
+  },
+  computed: {
+    ...mapGetters({
+      links: 'getLinks'
+    }),
+    ...mapGetters(['lang']),
+    labels() {
+      return this.links.map(x => x[this.lang.substring(0,2)])
+    }
+  },
+  mounted() {
+    this.setLang(navigator.language);
+  }
 })
 </script>
 

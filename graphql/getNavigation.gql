@@ -1,0 +1,13 @@
+query {
+  allNavigations {
+    edges {
+      node {
+        items {
+          link
+          pl
+          en
+        }
+      }
+    }
+  }
+}
