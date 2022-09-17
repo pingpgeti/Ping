@@ -2,7 +2,8 @@
   allGallerys(sortBy: meta_firstPublicationDate_DESC) {
 		edges {
       node {
-        title
+        pl
+        en
         images {
           image
         }

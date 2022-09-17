@@ -1,0 +1,10 @@
+{
+  allGallerypages {
+    edges {
+      node {
+        pl
+        en
+      }
+    }
+  }
+}
