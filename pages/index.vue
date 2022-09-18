@@ -4,7 +4,7 @@
       <AnimatedText class="main__center"
         v-if="!isLogoVisible"
         @finished="isLogoVisible = true"
-        text="KOŁO NAUKOWE POLITECHNIKI GDAŃSKIEJ"/>
+        :text="translatedText"/>
       <Transition mode="out-in" name="fade">
         <svg
           v-if="isLogoVisible"
@@ -58,6 +58,7 @@ import AnimatedText from '~/components/AnimatedText.vue'
 import News from '~/components/News.vue'
 
 import GetNews from '~/graphql/getNews.gql';
+import getHome from '~/graphql/getHome.gql';
 import { client } from '~/apollo/client';
 
 export default Vue.extend({
@@ -66,6 +67,9 @@ export default Vue.extend({
     components: { AnimatedText, News },
     
     async asyncData() {
+      const { data: textData} = await client.query({query: getHome });
+      const text = textData.allHomes.edges[0].node;
+
       const { data } = await client.query({query: GetNews});
       const news = data.allNewss.edges.map(edge => {
         const title = edge.node.title ? edge.node.title[0].text : '';
@@ -79,18 +83,23 @@ export default Vue.extend({
       });
 
       return {
-        news
+        news,
+        text
       }
     },
     computed: {
       ...mapGetters([
         'lang'
-      ])
+      ]),
+      translatedText() {
+        return this.text[this.lang.substring(0,2)].toUpperCase();
+      }
     },
     data() {
       return {
         isLogoVisible: false,
-        news: []
+        news: [],
+        text: {},
       }
     }
 })
