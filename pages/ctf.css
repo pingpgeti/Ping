@@ -32,6 +32,13 @@
 
 
 @media (max-width: 769px) {
+  .ctf {
+    top: 0;
+    left: 0;
+    transform: none;
+    position: relative;
+  }
+
   .counter {
     grid-template-columns: 1fr;
     row-gap: 12px;
