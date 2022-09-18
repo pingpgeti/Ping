@@ -8,3 +8,32 @@
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
+
+.ctf__counter {
+  margin: 2em 0;
+}
+
+.counter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 12px;
+}
+
+.counter__unit {
+  display: block;
+  padding: 2em;
+  border: 2px solid white;
+}
+
+.counter__unit b {
+  font-size: 3em;
+  font-weight: 400;
+}
+
+
+@media (max-width: 769px) {
+  .counter {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+}

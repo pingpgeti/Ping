@@ -4,6 +4,8 @@
       node {
         pl
         en
+        title
+        date
       }
     }
   }
