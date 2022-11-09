@@ -9,7 +9,8 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Koło Naukowe PING funkcjonuje na Wydziale Elektroniki, Telekomunikacji i Informatyki Politechniki Gdańskiej i zajmuje się tematyką cyberbezpieczeństwa i sieci komputerowych. Działamy w ramach sekcji CTF, sekcji programistycznej oraz cotygodniowych spotkań organizowanych przez studentów. Napisz do nas na fanpejdż, aby dowiedzieć się więcej!' },
-      { name: 'format-detection', content: 'telephone=yes' }
+      { name: 'format-detection', content: 'telephone=yes' },
+      { hid: 'og-image', property: 'og:image',content: 'https://knping.pl/favicon.ico'},
     ],
     link: [
       { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon.ico' },
