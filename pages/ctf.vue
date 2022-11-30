@@ -1,8 +1,14 @@
 <template>
   <div class="ctf">
-    <h1>{{ info.title }}</h1>
+    <h1>{{ title }}</h1>
+    <p><b>
+      <HoverLink :href=ctfLink target="_blank">{{ translatedInfo }}</HoverLink>
+    </b></p>
     <p>
-      <HoverLink :href="'https://ctf.knping.pl/'" target="_blank">{{ translatedInfo }}</HoverLink>
+      <HoverLink :href=discordLink target="_blank">&gt;&gt; discord &lt;&lt; </HoverLink>
+    </p>
+    <p>
+      <HoverLink :href=ctftimeLink target="_blank">&gt;&gt; ctftime &lt;&lt;</HoverLink>
     </p>
     <div v-if="displayTimer" class="ctf__counter counter">
       <div class="counter__unit">
@@ -50,10 +56,22 @@ export default Vue.extend({
       'lang'
     ]),
     translatedInfo() {
-      return this.info[this.lang.substring(0,2)]
+      return this.info[this.lang.substring(0,2)];
     },
     displayTimer() {
       return !(this.days <= 0 && this.hours <=0 && this.minutes <= 0 && this.seconds <= 0);
+    },
+    discordLink() {
+      return this.info.links.discord;
+    },
+    ctftimeLink() {
+      return this.info.links.ctftime;
+    },
+    ctfLink() {
+      return this.info.links.ctf;
+    },
+    title() {
+      return this.info.title;
     }
   },
   async asyncData() {
@@ -63,7 +81,12 @@ export default Vue.extend({
       pl: node.pl[0].text,
       en: node.en[0].text,
       date: node.date,
-      title: node.title
+      title: node.title,
+      links: {
+        discord: node.discord_link,
+        ctftime: node.ctftime_link,
+        ctf: node.ctf_link
+      }
     }
 
     return {
