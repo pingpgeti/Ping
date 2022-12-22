@@ -4,11 +4,7 @@
       <h1>{{ translatedTitle }}</h1>
     </header>
     <client-only>
-        <LightGallery
-          :images="gallery"
-          :index="galleryIndex"
-          :disable-scroll="true"
-          @close="closeGallery"/>
+      <GalleryPreview v-if="galleryIndex !== null" :gallery="gallery" @closeGallery="closeGallery"/>
     </client-only>
     <div class="gallery__grid">
       <GalleryImage v-for="(image, gIndex) in translatedImages"
@@ -24,6 +20,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import GalleryImage from '~/components/GalleryImage.vue';
+import GalleryPreview from '~/components/GalleryPreview.vue';
 
 import GetGalleries from '~/graphql/getGalleries.gql';
 import getGalleryPage from '~/graphql/getGalleryPage.gql';
@@ -33,11 +30,12 @@ import { mapGetters, mapMutations } from 'vuex';
 
 export default Vue.extend({
     name: "Gallery",
-    components: { GalleryImage },
+    components: { GalleryImage, GalleryPreview },
     data: () => ({
       title: {},
       images: [],
-      galleryIndex: null
+      galleryIndex: null,
+      imageIndex: 0
     }),
     async asyncData() {
       const { data: titleData } = await client.query({query: getGalleryPage});
@@ -84,6 +82,7 @@ export default Vue.extend({
     },
     methods: {
       galleryClick(index) {
+        this.imageIndex = 0;
         this.galleryIndex = index;
         this.lock();
       },
@@ -94,7 +93,10 @@ export default Vue.extend({
       ...mapMutations([
         'lock',
         'unlock'
-      ])
+      ]),
+      moveGallery(direction) {
+        this.imageIndex += direction;
+      }
     }
   }
 )
