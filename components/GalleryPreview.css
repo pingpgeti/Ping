@@ -26,6 +26,11 @@
   .preview svg {
     cursor: pointer;
   }
+
+  .preview__arrow--hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
   
   @media screen and (max-width: 769px) {
     .preview {
