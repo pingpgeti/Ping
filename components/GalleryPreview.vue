@@ -8,7 +8,7 @@
                 stroke-linejoin="round" />
         </svg>
         <div>
-            <svg class="preview__arrow" @click="moveGallery(-1)" v-if="imageIndex > 0" width="32" height="32"
+            <svg class="preview__arrow" @click="moveGallery(-1)" :class="{'preview__arrow--hidden' : (imageIndex <= 0)}" width="32" height="32"
                 viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M25.3334 16H6.66675" stroke="white" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -18,7 +18,7 @@
         </div>
         <img :src="gallery[imageIndex]" />
         <div>
-            <svg class="preview__arrow" @click="moveGallery(1)" v-if="imageIndex < gallery.length - 1" width="33"
+            <svg class="preview__arrow" @click="moveGallery(1)" :class="{'preview__arrow--hidden' : (imageIndex >= gallery.length - 1)}" width="33"
                 height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7.54565 16.7622H26.2123" stroke="white" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
