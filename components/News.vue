@@ -3,11 +3,10 @@
     <header class="news__header">
       {{ title }}
     </header>
-    <span class="news__date"> {{ date}} </span>
+    <span class="news__date"> {{ new Date(date).toLocaleString() }} </span>
     <div class="news__content">
-      
-      <p class="news__text">  
-        <img class="news__img" :src="src"/>
+      <p class="news__text">
+        <img class="news__img" :src="src" />
         {{ text }}
       </p>
     </div>
@@ -15,24 +14,24 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from "vue";
 export default Vue.extend({
-  name: 'News',
+  name: "News",
   props: {
     title: {
-      type: String
+      type: String,
     },
     date: {
-      type: String
+      type: String,
     },
     src: {
-      type: String
+      type: String,
     },
     text: {
-      type: String
-    }
-  }
-})
+      type: String,
+    },
+  },
+});
 </script>
 
 <style src="./News.css" scoped />

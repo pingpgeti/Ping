@@ -1,0 +1,12 @@
+{
+  allSpotkania_pings {
+    edges {
+      node {
+        author
+        timestamp
+        title
+        description
+      }
+    }
+  }
+}
