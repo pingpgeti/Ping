@@ -1,5 +1,5 @@
 {
-  allSpotkania_pings {
+  allSpotkania_pings(sortBy: timestamp_DESC) {
     edges {
       node {
         author
