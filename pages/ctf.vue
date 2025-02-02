@@ -10,7 +10,7 @@
     <p>
       <HoverLink :href=ctftimeLink target="_blank">&gt;&gt; ctftime &lt;&lt;</HoverLink>
     </p>
-    <!-- <div v-if="displayTimer" class="ctf__counter counter">
+    <div v-if="displayTimer" class="ctf__counter counter">
       <div class="counter__unit">
         <b>{{ days }}</b>
         <p>Days</p>
@@ -27,7 +27,7 @@
         <b>{{ seconds }}</b>
         <p>Seconds</p>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
