@@ -59,7 +59,7 @@ export default Vue.extend({
       return this.info[this.lang.substring(0,2)];
     },
     displayTimer() {
-      return !(this.days <= 0 && this.hours <=0 && this.minutes <= 0 && this.seconds <= 0);
+      return false;
     },
     discordLink() {
       return this.info.links.discord;
