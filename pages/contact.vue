@@ -10,7 +10,7 @@
       <div class="contact__forms">
         <h3>{{ contact.mail }}</h3>
         <h3>{{ contact.facebook }}</h3>
-        <h3>Discord: <a href="http://discord.gg/JyZsMEYGAn" target="_blank">discord.gg/JyZsMEYGAn</a></h3>
+        <h3>discord: <a href="http://discord.gg/JyZsMEYGAn" target="_blank" class="hover-link">discord.gg/JyZsMEYGAn</a></h3>
       </div>
     </div>
     <div class="contact__separator"/>
