@@ -9,7 +9,8 @@
       </div>
       <div class="contact__forms">
         <h3>{{ contact.mail }}</h3>
-        <h3>{{ contact.facebook }}</h3>
+        <!-- <h3>{{ contact.facebook }}</h3> !-->
+        <h3>FB: <HoverLink href="https://www.facebook.com/pingetipg" target="_blank">https://www.facebook.com/pingetipg</HoverLink></h3>
         <h3>discord: <HoverLink href="https://discord.gg/JyZsMEYGAn" target="_blank">discord.gg/JyZsMEYGAn</HoverLink></h3>
       </div>
     </div>
@@ -86,3 +87,4 @@ export default Vue.extend({
 </script>
 
 <style src="./contact.css" scoped/>
+
