@@ -1,6 +1,6 @@
 <template>
   <div class="ctf">
-    <h1>{{ title }}</h1>
+    <h1>pingCTF 2026</h1>
     <p><b>
       <HoverLink :href=ctfLink target="_blank">{{ translatedInfo }}</HoverLink>
     </b></p>
@@ -129,3 +129,4 @@ export default Vue.extend({
 </script>
 
 <style src="./ctf.css" scoped/>
+
