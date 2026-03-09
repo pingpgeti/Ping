@@ -84,7 +84,8 @@ export default Vue.extend({
       title: node.title,
       links: {
         discord: node.discord_link,
-        ctftime: node.ctftime_link,
+//        ctftime: node.ctftime_link,
+        ctftime: 'https://ctftime.org/event/3147',
         ctf: node.ctf_link
       }
     }
