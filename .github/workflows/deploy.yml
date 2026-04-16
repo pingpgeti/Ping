@@ -22,7 +22,8 @@ jobs:
         with:
           host: ${{ secrets.SCP_HOST }}
           username: ${{ secrets.SCP_USER }}
-          password: ${{ secrets.SCP_PASSWORD }}
+          #password: ${{ secrets.SCP_PASSWORD }}
+          key: ${{ secrets.SCP_KEY }}
           port: ${{ secrets.SCP_PORT }}
           source: "dist/"
           strip_components: 1
