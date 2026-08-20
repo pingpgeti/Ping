@@ -13,7 +13,7 @@ export default Vue.extend({
     return {
       title: 'KN Ping | discord',
       meta: [
-        { hid: 'refresh', 'http-equiv': 'refresh', content: `0; url=${DISCORD_LINK}` },
+        { hid: 'refresh', 'http-equiv': 'refresh', content: `0; url=${DISCORD_LINK}` } as any,
         { hid: 'robots', name: 'robots', content: 'noindex' }
       ]
     }
